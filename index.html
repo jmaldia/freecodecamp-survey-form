@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1 id="title">
-        FreeCodeCamp Survey Form - Jon Maldia
-    </h1>
-
-    <p id="description">
-        This is a Survey Form Created for the Responsive Responsive Web Design Project certification.
-    </p>
+    <header>
+        <h1 id="title">
+            FreeCodeCamp Survey Form
+        </h1>
+    
+        <p id="description">
+            This is a Survey Form Created for the Responsive Responsive Web Design Project certification.
+        </p>
+    </header>
 
     <form action="#" id="survey-form">
         <label for="name" id="name-label">Name:</label>
@@ -26,44 +28,59 @@
         <label for="number" id="number-label">Age:</label>
         <input type="number" id="number" placeholder="Age" min="18" max="65">
         
-        <select id="dropdown"> 
-            <option disabled="" value="">Select an option</option>
-            <option value="student">Student</option>
-            <option value="job">Fulltime Job</option>
-            <option value="student">Fulltime Student</option>
-            <option value="preferNot">Prefer not to Say</option>
-            <option value="other">Other</option>
-        </select>
-
-        <label>
-            Definitely
-            <input name="recomment-radio" value="1" type="radio">
-        </label>
-        <label>
-            Maybe
-            <input name="recomment-radio" value="2" type="radio">
-        </label>
-        <label>
-            Definitely Not
-            <input name="recomment-radio" value="3" type="radio">
+        <label for="dropdown" id="label-recommend-radio">
+            Current Role:
+            <br />
+            <br />
+            <select id="dropdown"> 
+                <option disabled="" value="">Select an option</option>
+                <option value="student">Student</option>
+                <option value="job">Fulltime Job</option>
+                <option value="student">Fulltime Student</option>
+                <option value="preferNot">Prefer not to Say</option>
+                <option value="other">Other</option>
+            </select>
         </label>
 
-        <label>
-            <input type="checkbox" name="interest" value="frontend">
-            Front-End
+        <label for="recommend-radio" id="label-recommend-radio">
+            Would you recommend FreeCodeCamp?
+            <br />
+            <br />
+            <input type="radio" id="recommend-radio" name="recommend-radio" value="1" >
+            <span class="input-labels">Definitely</span>
+            <br />
+            <input type="radio" id="recommend-radio" name="recommend-radio" value="2" >
+            <span class="input-labels">Maybe</span>
+            <br />
+            <input type="radio" id="recommend-radio" name="recommend-radio" value="3" >
+            <span class="input-labels">Definitely Not</span>
+            </label>
         </label>
-        <label>
-            <input type="checkbox" name="interest" value="backend">
-            Back-End
-        </label>
-        <label>
-            <input type="checkbox" name="interest" value="Boat"datascience>
-            Data Science
+        
+        <label for="recommend-radio" id="label-checkbox">
+            What tech are you most interested in?
+            <br />
+            <br />
+            <input type="checkbox" id="checkbox" name="interest" value="frontend">
+            <span class="input-labels">Front-End</span>
+            <br />
+            <input type="checkbox" id="checkbox" name="interest" value="backend">
+            <span class="input-labels">Back-End</span>
+            <br />
+            <input type="checkbox" id="checkbox" name="interest" value="Boat"datascience>
+            <span class="input-labels">Data Science</span>
         </label>
 
-        <textarea id="comments" name="comment" placeholder="Enter your message here..."></textarea>
+        <label for="comments" id="label-recommend-radio">
+            Leave a Message:
+            <br />
+            <br />
+            <textarea id="comments" name="comment" placeholder="Enter your message here..."></textarea>
+        </label>
 
         <button id="submit" type="submit">Submit</button>
     </form>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
